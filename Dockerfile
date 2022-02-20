@@ -5,7 +5,7 @@ COPY ui/pubspec.* /ui/
 RUN flutter pub get --suppress-analytics
 
 COPY ui /ui
-RUN flutter build web -t lib/main_production.dart
+RUN flutter build web -t lib/main_prod.dart
 
 
 FROM python:3.9.10-alpine3.15
