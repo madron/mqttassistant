@@ -1,7 +1,12 @@
 FROM cirrusci/flutter:2.10.1 as flutter
 
+WORKDIR /ui
+COPY ui/pubspec.* /ui/
+RUN flutter pub get --suppress-analytics
+
 COPY ui /ui
-RUN cd ui && flutter build web
+RUN flutter build web -t lib/main_production.dart
+
 
 FROM python:3.9.10-alpine3.15
 
