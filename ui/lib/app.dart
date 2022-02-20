@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  const App({String? backendUrl = '', Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
